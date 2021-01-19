@@ -4,24 +4,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Vibe Immersion</title>
+	<link rel="stylesheet" href="index.css">
 </head>
 <body>
 	|<main id="wrapper" class="main">
-		<h1>Where would you like to go?</h1>
+		<div></div>
+			<h1>Where would you like to go?</h1>
+		</div>
 		<div class="landingPage">
 			<div class="container">
 				<fieldset>
 					<legend>
-						<label for="destination-select"> Where would you like to go? </label>
-						<select name="destination" id="destination-select">
+						<label for="destination-select"> Where would you like to go? <br></label>
+						<select id=d-select onchange="location = this.value;">
 							<option value="" disabled selected>--gEt ReaDY tO Be TrANsported--</option>
-							<option value="seoul">Seoul, South Korea</option>
-							<option value="london">London, England</option>
-							<option value="tokyo">Tokyo, Japan</option>
-							<option value="no">New Orleans, United States</option>
-							<option value="paris">Paris, France</option>
-							<option value="rome">Rome, Italy</option>
-						</select>
+							<option value="html/seoul.html">Seoul, South Korea</option>
+							<option value="html/london.html">London, England</option>
+							<option value="html/tok2.html">Tokyo, Japan</option>
+							<option value="html/no.html">New Orleans, United States</option>
+							<option value="html/paris.html">Paris, France</option>
+							<option value="html/rome.html">Rome, Italy</option>
+						</select> <br> <br><br><br>
 					</legend>
 				</fieldset>
 			</div>

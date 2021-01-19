@@ -1,15 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+html { 
+  background:  url(https://upload.wikimedia.org/wikipedia/commons/7/7e/Rotating_earth.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+h1{
+  text-align: center;  
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 90px;
+  margin: .2em .5em;
+  color: red;
+ 
+}
 body {
-    padding:0;
-    margin:0;
-    overflow:hidden;
-	height: 600px;
+    height: 100%;
 }
-canvas {
-    padding:0;
-    margin:0;
+div{
+    text-align: center;
+    color: red;
+    font-size: 50px;
 }
-div.btnbg {
-    position:fixed;
-    left:0;
-    top:0;
+.button {
+    background-color: #fa0707; /* Green */
+    border: none;
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+  }
+  #d-select *
+{
+ border-radius:15px;
+ background-color:red;
+ font-size: 20px;
 }
