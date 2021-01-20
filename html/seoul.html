@@ -9,7 +9,8 @@
 <body>
     <main class="wrapper">
     <header class="header">
-        <h1>안녕하세요! Welcome to Seoul</h1>
+        <h1>안녕하세요</h1>
+        <h1>Welcome to Seoul!</h1>
     </header>
     <section class="information">
         <h1>Dynamic Seoul</h1>
@@ -37,11 +38,76 @@
             .catch(error => alert("Please add your api key to the fetch url"));
         </script>
     </section>
+    <section class="Music">
+        <h1>Top Music</h1>
+            <div class="musicClass" id='data'></div>
+    </section>
+
 <!-- Modal -->
     <section>
-        <div class="modal fade" id="modalCharacter" data-bs-backdrop="static"
-    </section>
+    <div id=shake><h2>Fun Facts!</h2></div>
+    <div class="landingPage">
+        <div class="container"> 
+            <button type="button" class="open-modal" data-open="modal1"><img src="https://pbs.twimg.com/media/DlCUGxyV4AAvtMC.jpg" alt="tteokboki"></button>
+        <div class="modal" id="modal1">
+            <div class="modal-dialog-centered">
+                <div class="modal-header">
+                    <button class="close-modal" aria-label="close modal" data-close>✕</button>
+                    <div class="modal-content">
+                    <h5 class="modal-title" id="modaltitle">What would you like to eat?<span id="modaltitle"></span></h5>
+                    </div>
+                    <div>
+                    <form action="select">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Please select an option.
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                <li class="dropDownText"><a class="dropdown-item homeworld" name="#modalHomeworldSelected" href="#">Breakfast</a></li>
+                                <li class="dropDownText"><a class="dropdown-item birthYear" name="#modalBirthYearSelected" href="#">Lunch</a></li>
+                                <li class="dropDownText"><a class="dropdown-item starships" name="#modalStarshipsSelected" href="#">Dinner</a></li>
+                                <li class="dropDownText"><a class="dropdown-item films" name="#modalFilmsSelected" href="#">Snack</a></li>
+                                <li class="dropDownText"><a class="dropdown-item films" name="#modalFilmsSelected" href="#">Beverage</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                    </div>
+                    <!-- Hidden -->
+                    <div class="modal-body">
+                        <div id="modalBreakfast" class="hidden">
+                        <p>BREAKFAST</p>
+                        </div>
+                        <div id="modalLunch" class="hidden">
+                        <p>LUNCH</p>
+                        </div>
+                        <div id="modalDinner" class="hidden">
+                        <p>DINNER</p>
+                        </div>
+                        <div id="modalSnack" class="hidden">
+                        <p>SNACK</p>
+                        </div>
+                        <div id="modalBeverage" class="hidden">
+                        <p>BEVERAGE</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+                    <!-- <li>
+                        <button id="buttoneat" data-bs-toggle="modal" data-bs-target="#modaleat"><img id="imageeat" src="https://pbs.twimg.com/media/DlCUGxyV4AAvtMC.jpg" alt="tteokboki"></button>
+                    </li>
+                    <li>
+                        <button id="buttoneat" data-bs-toggle="modal" data-bs-target="#modaleat"><img id="imageeat" src="https://pbs.twimg.com/media/DlCUGxyV4AAvtMC.jpg" alt="tteokboki"></button>
+                    </li> -->
+            </div>
+        </div>
+        <footer></footer>
     </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="seoul.js"></script>
+<script src="modal.js"></script>
 </html>

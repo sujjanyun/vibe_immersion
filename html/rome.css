@@ -1,0 +1,119 @@
+html {
+    color: #ddbda6;
+    font-family: "Special Elite", cursive;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+body {
+    background-image: url(https://757967.smushcdn.com/1421783/wp-content/uploads/2019/01/Ancient-Rome-Rome-Italy-The-Beautiful-Site-of-Rome-768x606.jpg?lossy=1&strip=0&webp=1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #ddbda6;
+    display: flex;
+    flex-direction: column;
+    font-family: "Amatic SC", cursive;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.header {
+    color: #77a3cf;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+.information {
+    color: white;
+    font-size: 15px;
+    margin-top: 5%;
+    background-color: blue;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.weather {
+    font-family: "Special Elite", cursive;
+    line-height: 1.25rem;
+    margin: 20px auto auto;
+    padding: 5px;
+    width: 100%;
+    background-color: rgb(8, 8, 235);
+}
+
+.funfacts {
+    flex-direction: column;
+}
+
+.image-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.image-list li {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 320px;
+    margin: 20px;
+    max-width: 320px;
+    position: static;
+    width: 100%;
+}
+
+.image-list li img {
+    border: none;
+    transform: scale(1.2);
+    width: 100%;
+}
+div.shake{ 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 2.5em; 
+    color: rgb(4, 110, 4); 
+  } 
+  /*creating the shake animation*/ 
+    
+  div:hover h2{ 
+    animation:  shake 0.8s  ; 
+  } 
+  
+  @keyframes shake{ 
+    0%{ 
+      transform: translateX(0) 
+    } 
+    25%{ 
+      transform: translateX(25px); 
+    } 
+      
+    50%{ 
+      transform: translateX(-25px); 
+    } 
+    100%{ 
+      transform: translateX(0px); 
+    } 
+  } 
+  h2{
+      color: red;
+  }

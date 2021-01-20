@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome To Paris</title>
+    <link rel="stylesheet" href="paris.css">
 </head>
 <body>
-    
-</body>
+          <main class="wrapper">
+            <header class="header">
+                <h1>Welcome to Paris</h1>
+            </header>
+            <section class="information">
+                <h1>Paris</h1>
+                <p>Paris. Poets, artists, playwrights, writers, journalists, and more have all written about their love of this city….and it’s hard not to fall in love with Paris. It’s a place that exudes culture, sophistication, class, and style.</p>
+            </section>
+            <section class="weather">
+                <h1>Current Weather</h1>
+                <h2 id="weather">Loading</h2>
+                <script>
+                    fetch("https://api.openweathermap.org/data/2.5/weather?q=paris&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+                    .then(response => response.json())
+                    .then(body => {
+                    document.getElementById("weather").innerHTML = body.main.temp + "°";
+                    })
+                    .catch(error => alert("Please add your api key to the fetch url"));
+                </script>
+                <h1>Forecast</h1>
+                <h2 id="forecast">Loading</h2>
+                <script>
+                    fetch("https://api.openweathermap.org/data/2.5/weather?q=paris&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+                    .then(response => response.json())
+                    .then(body => {
+                    document.getElementById("forecast").innerHTML = body.weather.main + "°";
+                    })
+                    .catch(error => alert("Please add your api key to the fetch url"));
+                </script>
+            </section>
+            <section class="Music">
+                <h1>Top Music</h1>
+                  <div class="musicClass" id='data'></div>
+            </section>
+        
+        <!-- Modal -->
+            <section>
+                <div class="modal fade" id="modalCharacter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">What would you like to eat?<span id="modalCharacterName"></span></h5>
+                            </div>
+                            <div>
+                            <form action="select">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Please select an option.
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                      <li class="dropDownText"><a class="dropdown-item homeworld" name="#modalHomeworldSelected" href="#">Breakfast</a></li>
+                                      <li class="dropDownText"><a class="dropdown-item birthYear" name="#modalBirthYearSelected" href="#">Lunch</a></li>
+                                      <li class="dropDownText"><a class="dropdown-item starships" name="#modalStarshipsSelected" href="#">Dinner</a></li>
+                                      <li class="dropDownText"><a class="dropdown-item films" name="#modalFilmsSelected" href="#">Which films are you in?</a></li>
+                                    </ul>
+                                  </div>
+                            </form>
+                            </div>
+                            <!-- Hidden -->
+                            <div class="modal-body">
+                                <div id="modalBirthYearSelected" class="hidden">
+                                <p>Birth Year: <span id='modalBirthYear'></span></p>
+                                </div>
+                                <div id="modalHomeworldSelected" class="hidden">
+                                <p>Homeworld: 
+                                    <ul id='modalHomeworld' class="clearModalUponClose"></ul>
+                                </p>
+                                </div>
+                                <div id="modalStarshipsSelected" class="hidden">
+                                <p>Starships: 
+                                    <ul id='starships' class="clearModalUponClose"></ul>
+                                </p>
+                                </div>
+                                <div id="modalFilmsSelected" class="hidden">
+                                <p>Featured in these films:
+                                    <ul id="films" class="clearModalUponClose"></ul>
+                                </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" id="buttonClose" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            <main id="wrapper" class="main">
+                <div id=shake><h2>Fun Facts!</h2></div>
+                
+                <h3>Croissant</h3>
+                <div class="landingPage">
+                    <div class="container"> 
+                        <ul class="image-list">
+                            <li>
+                                <button id="buttoneat" data-bs-toggle="modal" data-bs-target="#modaleat"><img id="imageeat" src="https://devourparisfoodtours.com/wp-content/uploads/best-croissants-in-paris-1.jpg" alt="tteokboki"></button>
+                            </li>
+                            <li>
+                                <button id="buttoneat" data-bs-toggle="modal" data-bs-target="#modaleat"><img id="imageeat" src="https://devourparisfoodtours.com/wp-content/uploads/best-croissants-in-paris-1.jpg" alt="tteokboki"></button>
+                            </li>
+                            <li>
+                                <button id="buttoneat" data-bs-toggle="modal" data-bs-target="#modaleat"><img id="imageeat" src="https://devourparisfoodtours.com/wp-content/uploads/best-croissants-in-paris-1.jpg" alt="tteokboki"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <footer></footer>
+            </main>
+        </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="js/paris.js"></script>
 </html>

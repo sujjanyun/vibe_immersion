@@ -1,62 +1,51 @@
-var pics = [] /* array of pics */
-var time_anim = 500 /* anim time */
+'use strict';
+// MODAL STUFF
+const openEls = document.querySelectorAll("[data-open]");
+const isVisible = "is-visible";
+ 
+for(const el of openEls) {
+  el.addEventListener("click", function() {
+    const modalId = this.dataset.open;
+    document.getElementById(modalId).classList.add(isVisible);
+  });
+}
 
-$(document).ready(function () {
-    pics = $("#deck img"); /* find ships */
-    shuffle(2); /* wheeee */
+const closeEls = document.querySelectorAll("[data-close]");
+const isVisible = "is-visible";
+ 
+for (const el of closeEls) {
+  el.addEventListener("click", function() {
+    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+  });
+}
+
+const isVisible = "is-visible";
+ 
+document.addEventListener("click", e => {
+  if (e.target == document.querySelector(".modal.is-visible")) {
+    document.querySelector(".modal.is-visible").classList.remove(isVisible);
+  }
 });
 
-function shuffle(level) {
-    /* do the animation */
-    var c = randInt(2, 3)
-    cycle(getElements(pics, c))
-
-    if (level > 1) {
-        setTimeout(function () {
-            shuffle(level - 1)
-        }, time_anim)
-    }
-}
-
-function randInt(min, max) {
-    /* get random integer */
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function cycle(items) {
-    /* cycle ships in array */
-    var pos0 = $(items[0]).position()
-
-    for (i = 1; i < items.length; i++) {
-        var sh = items[i];
-        var shp = $(sh).position();
-
-        $(items[i - 1]).animate({
-            "left": shp.left,
-                "top": shp.top
-        }, time_anim);
-    }
-
-    $(sh).animate({
-        "left": pos0.left,
-            "top": pos0.top
-    }, time_anim);
-}
-
-function getElements(arr, n) {
-    /* Get n random elements from array */
-    var used = []
-    var result = []
-
-    while (result.length < n && result.length < arr.length) {
-        var i = randInt(0, arr.length - 1)
-        if (jQuery.inArray(i, used) !== -1) {
-            continue;
-        }
-
-        used.push(i)
-        result.push(arr[i])
-    }
-
-    return result;
-}
+// <!-- music info load function -->
+window.addEventListener("load", function (event) {
+    event.preventDefault();
+    const url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=japan&api_key=a4639d1359fd1cae45a045b4b7114178&limit=3&format=json";
+    fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var seoulTrack = data.tracks.track.map((track) => {
+          return `<div>
+              <ol>
+              <li>Track Name: ${track.name}</li>
+              <li>Track Duration: ${track.duration}</li>
+              <li>Artist: ${track.artist.name}</li>
+              <li>Link: ${track.url}</li>
+              </ol>
+              </div>`;
+        });
+        document.getElementById("data").innerHTML = seoulTrack;
+      });
+  });

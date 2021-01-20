@@ -35,3 +35,11 @@ div{
  background-color:red;
  font-size: 20px;
 }
+.musicClass {
+  border: 1px black solid;
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+}
