@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul, South Korea</title>
+    <link rel="stylesheet" href="seoul.css">
+</head>
+<body>
+    <main class="wrapper">
+    <header class="header">
+        <h1>안녕하세요! Welcome to Seoul</h1>
+    </header>
+    <section class="information">
+        <h1>Dynamic Seoul</h1>
+        <p>Seoul (서울) is the capital of South Korea. Before, Seoul was the capital of the Korea from 1394 until the formal division of the country In 1948. With a municipal population of over 11.8 million, and a metropolitan population totaling over 25.6 million, Seoul is by far South Korea's largest city and one of East Asia's financial and cultural epicenters. Seoul also serves as the cultural, economic, business and political center of South Korea where skyscrapers towers over its buddhist temples. A fascinating blend of ancient traditions and cutting-edge digital technology, home to endless street food vendors and vast nightlife districts, an extraordinarily high-pressure educational system and serene Buddhist temples, a trend-setting youth culture and often crushing conformism, extraordinary architecture and endless monotonous rows of grey apartment buildings, Seoul is a city filled with stark contrasts.</p>
+    </section>
+    <section class="weather">
+        <h1>Current Weather</h1>
+        <h2 id="weather">Loading</h2>
+        <script>
+            fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+            .then(response => response.json())
+            .then(body => {
+            document.getElementById("weather").innerHTML = body.main.temp + "°";
+            })
+            .catch(error => alert("Please add your api key to the fetch url"));
+        </script>
+        <h1>Forecast</h1>
+        <h2 id="forecast">Loading</h2>
+        <script>
+            fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+            .then(response => response.json())
+            .then(body => {
+            document.getElementById("forecast").innerHTML = body.weather.main + "°";
+            })
+            .catch(error => alert("Please add your api key to the fetch url"));
+        </script>
+    </section>
+<!-- Modal -->
+    <section>
+        <div class="modal fade" id="modalCharacter" data-bs-backdrop="static"
+    </section>
+    </main>
+</body>
+<script src="seoul.js"></script>
+</html>
