@@ -12,7 +12,7 @@ html {
   }
   
   body {
-    background-image: url('https://wallpaperaccess.com/full/2146222.jpg');
+    background-image: url(https://757967.smushcdn.com/1421783/wp-content/uploads/2019/01/Ancient-Rome-Rome-Italy-The-Beautiful-Site-of-Rome-768x606.jpg?lossy=1&strip=0&webp=1);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -63,10 +63,18 @@ html {
   /* MUSIC */
   
   .Music {
+    font-family: "Gill Sans", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
     color: white;
     font-size: 15px;
-    margin-top: 5%;
-    background-color: blue;
+    line-height: 5px;
+    margin: 20px auto auto;
+    padding: 5px;
+    width: 100%;
+    background-color: rgb(8, 8, 235);
   }
   
   /* IMAGES */

@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Seoul, South Korea</title>
+    <link rel="stylesheet" href="seoul.css">
 </head>
 <body>
-    
+<!-- LANDING PAGE -->
+    <main id="wrapper" class="main">
+        <header class="header">
+            <h1>Japan</h1>
+            <h1>Welcome to Japan!</h1>
+        </header>
+        <section class="information">
+            <h1>Japan</h1>
+            <p>Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</p>
+        </section>
+        <section class="weather">
+            <h1>Current Weather</h1>
+            <h2 id="weather">Loading</h2>
+            <script>
+                fetch("https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+                .then(response => response.json())
+                .then(body => {
+                document.getElementById("weather").innerHTML = body.main.temp + "°";
+                })
+                .catch(error => alert("Please add your api key to the fetch url"));
+            </script>
+        </section>
+        <section class="Music">
+            <h1>Top Music</h1>
+                <div class="musicClass" id='data'></div>
+        </section>
+<!-- FUN FACTS -->
+        <section class="funfacts">
+            <h2>Fun Facts!</h2>
+            <div class="landingPage">
+                <div class="container"> 
+                    <div class="food">
+                    <h5>CUISINE</h5>
+                        <img src="https://images.japancentre.com/page_elements/image1s/1513/original/sushi-bars-best-japanese-food.jpg?1470240553" alt="food">japanese food is yummy</p>
+                    </div>
+                    <div class="culture">    
+                    <h5>CULTURE</h5>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ832jl_7W8jxB20h_n1uVRldDt8fdUN0fWg&usqp=CAU" alt="culture">
+                    </div>
+                    <div class="vibe">
+                    <h5>VIBE</h5>   
+                        <img src="https://www.airfrance.com/MF/common/common/img/tbaf/news/OSA/vibrez-avec-la-jeunesse-nippone-dans-le-quartier-amemura-d-osaka/OSA-vibrez-avec-la-jeunesse-nippone-dans-le-quartier-amemura-d-osaka-2_1-1024x512.jpg" alt="vibe">
+                    </div>
+                    <div class="transportation">
+                    <h5>TRANSPORT</h5>
+                        <img src="https://www.japanconcerttickets.com/dev/wp-content/uploads/2019/04/Train-Los-Paseos-Flickr-slim.jpg" alt="taxi">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="get.js"></script>
+<script src="tokyo.js"></script>
 </body>
-<!-- <script src="js/index.js"></script> -->
 </html>

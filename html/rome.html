@@ -7,118 +7,46 @@
     <link rel="stylesheet" href="rome.css">
 </head>
 <body>
-            <header class="header">
-                <h1>Welcome to Rome!</h1>
-            </header>
-            <section class="information">
-                <h1>Rome</h1>
-                <p>Rome was called the “Eternal City” by the ancient Romans because they believed that no matter what happened in the rest of the world, the city of Rome would always remain standing. Exploring the city centre by foot surrounded by glorious monuments and colossal remains takes you back in time to the “glory that was Rome”.</p>
-            </section>
-            <section class="weather">
-                <h1>Current Weather</h1>
-                <h2 id="weather">Loading</h2>
-                <script>
-                    fetch("https://api.openweathermap.org/data/2.5/weather?q=rome&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
-                    .then(response => response.json())
-                    .then(body => {
-                    document.getElementById("weather").innerHTML = body.main.temp + "°";
-                    })
-                    .catch(error => alert("Please add your api key to the fetch url"));
-                </script>
-                <h1>Forecast</h1>
-                <h2 id="forecast">Loading</h2>
-                <script>
-                    fetch("https://api.openweathermap.org/data/2.5/weather?q=rome&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
-                    .then(response => response.json())
-                    .then(body => {
-                    document.getElementById("forecast").innerHTML = body.weather.main + "°";
-                    })
-                    .catch(error => alert("Please add your api key to the fetch url"));
-                </script>
-            </section>
-            <section class="Music">
-                <h1>Top Music</h1>
-                  <div class="musicClass" id='data'></div>
-            </section>
-        
-        <!-- Modal -->
-            <section>
-                <div class="modal fade" id="modalCharacter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">What would you like to know about <span id="modalCharacterName"></span>?</h5>
-                            </div>
-                            <div>
-                            <form action="select">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Please Choose a question...
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                                      <li class="dropDownText"><a class="dropdown-item homeworld" name="#modalHomeworldSelected" href="#">What is your homeworld?</a></li>
-                                      <li class="dropDownText"><a class="dropdown-item birthYear" name="#modalBirthYearSelected" href="#">What is your birth year?</a></li>
-                                      <li class="dropDownText"><a class="dropdown-item starships" name="#modalStarshipsSelected" href="#">What starships do you pilot?</a></li>
-                                      <li class="dropDownText"><a class="dropdown-item films" name="#modalFilmsSelected" href="#">Which films are you in?</a></li>
-                                    </ul>
-                                  </div>
-                            </form>
-                            </div>
-                            <!-- Hidden -->
-                            <div class="modal-body">
-                                <div id="modalBirthYearSelected" class="hidden">
-                                <p>Birth Year: <span id='modalBirthYear'></span></p>
-                                </div>
-                                <div id="modalHomeworldSelected" class="hidden">
-                                <p>Homeworld: 
-                                    <ul id='modalHomeworld' class="clearModalUponClose"></ul>
-                                </p>
-                                </div>
-                                <div id="modalStarshipsSelected" class="hidden">
-                                <p>Starships: 
-                                    <ul id='starships' class="clearModalUponClose"></ul>
-                                </p>
-                                </div>
-                                <div id="modalFilmsSelected" class="hidden">
-                                <p>Featured in these films:
-                                    <ul id="films" class="clearModalUponClose"></ul>
-                                </p>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" id="buttonClose" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md">
-                        <div id=shake><h2>Fun Facts!</h2></div>
-                        <h1>What to EAT!</h1>
-                        <h3>Rigatoni Carbonara</h3>
-                        <div class="eat">
-                            <ul class="image-list">
-                                <li>
-                                    <button id="buttoneat" data-bs-toggle="modal" data-bs-target="#modaleat"><img id="imageeat" src="https://spanishsabores.com/wp-content/uploads/2019/01/DSC07278.jpg" alt="tteokboki"></button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                    One of three columns
-                    </div>
-                    <div class="col-md">
-                    One of three columns
+<!-- LANDING PAGE -->
+    <main id="wrapper" class="main">
+        <header class="header">
+            <h1>WELCOME TO ROME!</h1>
+        </header>
+        <section class="information">
+            <p>Rome was called the “Eternal City” by the ancient Romans because they believed that no matter what happened in the rest of the world, the city of Rome would always remain standing. Exploring the city centre by foot surrounded by glorious monuments and colossal remains takes you back in time to the “glory that was Rome”.</p>
+        </section>
+        <section class="weather">
+            <h1>Current Weather</h1>
+            <h2 id="weather">Loading</h2>
+            <script>
+                fetch("https://api.openweathermap.org/data/2.5/weather?q=rome&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+                .then(response => response.json())
+                .then(body => {
+                document.getElementById("weather").innerHTML = body.main.temp + "°";
+                })
+                .catch(error => alert("Please add your api key to the fetch url"));
+            </script>
+        </section>
+        <section class="Music">
+            <h1>Top Music</h1>
+                <div class="musicClass" id='data'></div>
+        </section>
+<!-- FUN FACTS -->
+        <section class="funfacts">
+            <div id=shake><h2>Fun Facts!</h2></div>
+            <div class="landingPage">
+                <div class="container"> 
+                    <div class="food">
+                    <h5>CUISINE</h5>
+                        <img src="https://spanishsabores.com/wp-content/uploads/2019/01/DSC07278.jpg" alt="food">"Rigatoni Carbonara"</p>
+                   
                     </div>
                 </div>
             </div>
-                
-                </div>
-            </section>
-            </main>
-</body>
+        </section>
+    </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="get.js"></script>
 <script src="js/rome.js"></script>
+</body>
 </html>

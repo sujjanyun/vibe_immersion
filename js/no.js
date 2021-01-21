@@ -13,7 +13,6 @@ window.addEventListener("load", function (event) {
               <li>Track Name: ${track.name}</li>
               <li>Track Duration: ${track.duration}</li>
               <li>Artist: ${track.artist.name}</li>
-              <li>Link: ${track.url}</li>
               </ol>
               </div>`;
         });

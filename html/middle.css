@@ -63,10 +63,18 @@ html {
   /* MUSIC */
   
   .Music {
+    font-family: "Gill Sans", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
     color: white;
     font-size: 15px;
-    margin-top: 5%;
-    background-color: blue;
+    line-height: 5px;
+    margin: 20px auto auto;
+    padding: 5px;
+    width: 100%;
+    background-color: rgb(8, 8, 235);
   }
   
   /* IMAGES */

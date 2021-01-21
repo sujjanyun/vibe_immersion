@@ -1,51 +1,80 @@
 'use strict';
-// MODAL STUFF
-const openEls = document.querySelectorAll("[data-open]");
-const isVisible = "is-visible";
- 
-for(const el of openEls) {
-  el.addEventListener("click", function() {
-    const modalId = this.dataset.open;
-    document.getElementById(modalId).classList.add(isVisible);
-  });
-}
-
-const closeEls = document.querySelectorAll("[data-close]");
-const isVisible = "is-visible";
- 
-for (const el of closeEls) {
-  el.addEventListener("click", function() {
-    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
-  });
-}
-
-const isVisible = "is-visible";
- 
-document.addEventListener("click", e => {
-  if (e.target == document.querySelector(".modal.is-visible")) {
-    document.querySelector(".modal.is-visible").classList.remove(isVisible);
-  }
-});
-
 // <!-- music info load function -->
 window.addEventListener("load", function (event) {
-    event.preventDefault();
-    const url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=japan&api_key=a4639d1359fd1cae45a045b4b7114178&limit=3&format=json";
-    fetch(url)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        var seoulTrack = data.tracks.track.map((track) => {
-          return `<div>
-              <ol>
-              <li>Track Name: ${track.name}</li>
-              <li>Track Duration: ${track.duration}</li>
-              <li>Artist: ${track.artist.name}</li>
-              <li>Link: ${track.url}</li>
-              </ol>
-              </div>`;
-        });
-        document.getElementById("data").innerHTML = seoulTrack;
+  event.preventDefault();
+  const url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=korea,%20republic+of&api_key=a4639d1359fd1cae45a045b4b7114178&limit=3&format=json";
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var seoulTrack = data.tracks.track.map((track) => {
+        return `<div>
+            <ol>
+            <li>Track Name: ${track.name}</li>
+            <li>Artist: ${track.artist.name}</li>
+            </ol>
+            </div>`;
       });
-  });
+      document.getElementById("data").innerHTML = seoulTrack;
+    });
+});
+
+// // OPEN MODAL
+
+// function toggleModal() {
+//   const modalOverlay = document.querySelector('buttonfood');
+//   modalOverlay.classList.toggle('visible');
+// }
+
+// function eventListener(imageButton) {
+//   imageButton.addEventListener('click', function (event) {
+//       event.preventDefault();
+//   })
+// }
+
+// $('#myModal').modal('toggle')
+
+// // CLOSE MODAL
+// closeModal.addEventListener('click', toggleModal);
+
+
+// HIDDEN
+// function displayElement(option) {
+//   const selectedItem = document.querySelector(option);
+//   selectedItem.addEventListener('click', function(event) {
+//       hideElements();
+//       console.log(event.target.name);
+//       const targetDiv = document.querySelector(`${event.target.name}`);
+//       targetDiv.classList.remove('hidden');
+//   })
+// }
+
+// function hideElements() {
+//   const hiddenElements = document.querySelectorAll('.modal-body div');
+//   hiddenElements.forEach(function (element) {
+//       element.classList.add('hidden');
+//   });
+// }
+
+// CLOSE MODAL
+// function clearModal() {
+//   const button = document.querySelector('#buttonClose');
+//   buttonListener(button);
+// }
+
+// function buttonListener (button) {
+//   button.addEventListener('click', function (event) {
+//       const ulElemModal = document.querySelectorAll('.clearModalUponClose');
+//       for (let ul of ulElemModal) {
+//           while (ul.firstChild) {
+//               ul.removeChild(ul.firstChild);
+//           }
+//       }
+//       hideElements();
+//   })
+// }
+
+// dropDownOptions.forEach((option) =>  {
+//   displayElement(option);
+// })

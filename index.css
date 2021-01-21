@@ -5,7 +5,7 @@ html {
 }
 h1{
   text-align: center;  
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
   font-size: 90px;
   margin: .2em .5em;
   color: red;
@@ -27,7 +27,7 @@ div{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 26px;
+    font-size: 35px;
   }
   #d-select *
 {
@@ -43,3 +43,46 @@ div{
   margin: 10px;
   font-size: 12px;
 }
+.P1 { 
+  transform: translate(20px, 85px) rotate(-30deg); 
+} 
+
+.i1 { 
+  transform: translate(13px, 60px) rotate(-25deg); 
+} 
+
+.c1 { 
+  transform: translate(6px, 40px) rotate(-20deg); 
+} 
+
+.k1 { 
+  transform: translate(3px, 23px) rotate(-15deg); 
+} 
+
+.A1 { 
+  transform: translate(2px, 14px) rotate(-10deg); 
+} 
+
+.P2 { 
+  transform: translate(2px, 14px) rotate(10deg); 
+} 
+
+.l2 { 
+  transform: translate(3px, 23px) rotate(15deg); 
+} 
+
+.a2 { 
+  transform: translate(-6px, 40px) rotate(20deg); 
+} 
+
+.c2 { 
+  transform: translate(-13px, 60px) rotate(25deg); 
+} 
+
+.e2 { 
+  transform: translate(-20px, 85px) rotate(30deg); 
+
+}
+span { 
+  display: inline-block; 
+} 

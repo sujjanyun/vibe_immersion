@@ -25,6 +25,14 @@ body {
   text-align: center;
 }
 
+/* LANDING PAGE */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+}
 
 .header {
   color: #7ba9d8;
@@ -39,13 +47,7 @@ body {
   background-color: blue;
 }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  max-width: 600px;
-  width: 100%;
-}
+/* WEATHER */
 
 .weather {
   font-family: "Gill Sans", sans-serif;
@@ -55,136 +57,122 @@ body {
   margin: 20px auto auto;
   padding: 5px;
   width: 100%;
-  background-color: rgb(8, 8, 235);
+  background-color:blue;
 }
 
-/* IMAGE BUTTON */
+/* MUSIC */
+
+.Music {
+  font-family: "Gill Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+  margin: 20px auto auto;
+  width: 100%;
+  background-color: blue;
+}
+
+.musicClass {
+  font-family: "Gill Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+  margin: auto auto auto;
+  width: 100%;
+}
+
+/* IMAGES */
+h5 {
+  flex-direction: row;
+}
+
+.funfacts {
+  font-family: "Gill Sans", sans-serif;
+  color: white;
+  font-size: 15px;
+  margin: 20px auto auto;
+  padding: 5px;
+  width: 100%;
+  background-color: blue;
+}
 
 .container {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: baseline;
   flex-direction: row;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.35s ease-in;
 }
 
-.container {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 320px;
-  margin: 20px;
-  max-width: 200px;
-  max-height: 10 px;
-  position: static;
-  width: 100%;
+.food {
+  justify-content: center;
+  align-items: baseline;
+  margin: auto auto auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.culture {
+  justify-content: center;
+  align-items: baseline;
+  margin: auto auto auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
 }
 
 .container img {
   border: none;
+  justify-content: center;
   transform: scale(1.2);
   width: 100%;
-}
-
-.container {
-  margin-top: 50px;
-}
-
-.landingPage {
-  display: flex;
-  flex-direction: row;
-}
-
-button img {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 320px;
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+  position: static;
+  padding: 10px;
   display: flex;
   transition: transform 0.4s; /* smoother zoom */
   z-index: -1;
   flex-direction: row;
-
 }
 
-button:hover img {
+.food:hover img {
   transform: scale(1.6);
   transform-origin: 50% 50%;
   z-index: 3000;
 }
 
-/* MODAL CSS */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  background: var(--black);
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.35s ease-in;
+.culture:hover img {
+  transform: scale(1.6);
+  transform-origin: 50% 50%;
+  z-index: 3000;
 }
 
-.modal.is-visible {
-  visibility: visible;
-  opacity: 1;
+.vibe:hover img {
+  transform: scale(1.6);
+  transform-origin: 50% 50%;
+  z-index: 3000;
 }
 
-#modalCharacter {
-  color: purple
+.transportation:hover img {
+  transform: scale(1.6);
+  transform-origin: 50% 50%;
+  z-index: 3000;
 }
 
-.modal-content {
-  background-color: white;
-  border: 3px solid purple;
-  border-top: 1px solid purple;
-  margin: auto;
-  max-width: 70vw;
-}
-
-.modal-body li {
-  list-style-type: square;
-}
-
-#buttonClose {
-  background-color: purple;
-  border: 1px solid white;
-  color: white;
-}
-
-#dropdownMenuButton2 {
-  background-color: purple;
-  border: 1px solid white;
-  color: blue;
-}
-
-.dropDownText {
-  color: purple;
-}
-
-.dropdown-item:hover {
-  background-color: rgb(0, 17, 255);
-  color: white;
-}
-
-.hidden {
-  display: none;
-}
-
-.shown {
-  display: block;
-}
-
-.modal-header {
-  border-bottom: 1px solid white;
-}
-
-.modal-footer {
-  border-top: 1px solid rgb(30, 11, 56);
-}
 div.shake{ 
   position: absolute; 
   top: 50%; 
@@ -194,7 +182,7 @@ div.shake{
   color: rgb(4, 110, 4); 
 } 
 /*creating the shake animation*/ 
-  
+
 div:hover h2{ 
   animation:  shake 0.8s  ; 
 } 

@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Orleans,La US</title>
-    <link rel="stylesheet" href="no.css">
+    <title>WELCOME TO ROME</title>
+    <link rel="stylesheet" href="rome.css">
 </head>
 <body>
 <!-- LANDING PAGE -->
     <main id="wrapper" class="main">
         <header class="header">
-            <h1>Welcome to New Orleans!</h1>
+            <h1>WELCOME TO ROME!</h1>
         </header>
         <section class="information">
-            <p>New Orleans is known for its European-style architecture, mouth-watering Creole cuisine and all-around good-time vibes. And as its backbone is music: Jazz, blues, rock 'n' roll and Zydeco tunes ooze from every city crevice. But for many, the main reason to visit is Mardi Gras, an over-the-top party with Carnival traits, such as masks, music, floats and merriment. Even if you don't make it to Mardi Gras, you'll still find a party year-round, with revelers pouring out of Bourbon Street clubs until the wee hours of the morning and a festival of some sort almost every weekend.</p>
+            <p>Rome was called the “Eternal City” by the ancient Romans because they believed that no matter what happened in the rest of the world, the city of Rome would always remain standing. Exploring the city centre by foot surrounded by glorious monuments and colossal remains takes you back in time to the “glory that was Rome”.</p>
         </section>
         <section class="weather">
             <h1>Current Weather</h1>
             <h2 id="weather">Loading</h2>
             <script>
-                fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+                fetch("https://api.openweathermap.org/data/2.5/weather?q=rome&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
                 .then(response => response.json())
                 .then(body => {
                 document.getElementById("weather").innerHTML = body.main.temp + "°";
@@ -38,15 +38,26 @@
                 <div class="container"> 
                     <div class="food">
                     <h5>CUISINE</h5>
-                        <img src="https://chowhound3.cbsistatic.com/resize/d9dfc6b1b3a05f3da23a07355b22fb3bce2d8107/2015/05/10900_crawfish_boil2.jpg?fit=bounds&height=800&width=1280"  alt="food">Crawfish</p>
+                        <img src="https://spanishsabores.com/wp-content/uploads/2019/01/DSC07278.jpg" alt="food">"Rigatoni Carbonara"</p>
                     </div>
-                   
+                    <div class="culture">    
+                    <h5>CULTURE</h5>
+                        <img src="https://spanishsabores.com/wp-content/uploads/2019/01/DSC07278.jpg" alt="culture">
+                    </div>
+                    <div class="vibe">
+                    <h5>VIBE</h5>   
+                        <img src="https://spanishsabores.com/wp-content/uploads/2019/01/DSC07278.jpg" alt="vibe">
+                    </div>
+                    <div class="transportation">
+                    <h5>TRANSPORT</h5>
+                        <img src="https://spanishsabores.com/wp-content/uploads/2019/01/DSC07278.jpg" alt="taxi">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="get.js"></script>
-<script src="js/no.js"></script>
+<script src="js/rome.js"></script>
 </body>
 </html>
