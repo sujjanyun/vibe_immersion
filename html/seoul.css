@@ -11,6 +11,10 @@ html {
 box-sizing: inherit;
 }
 
+audio {
+  margin: auto;
+}
+
 body {
   background-image: url('https://wallpaperaccess.com/full/2146222.jpg');
   background-repeat: no-repeat;
@@ -35,16 +39,17 @@ body {
 }
 
 .header {
-  color: #7ba9d8;
+  color: #7bb3d8;
   font-size: 30px;
   margin-top: 5%;
+  -webkit-text-stroke: 2px #7bbed8;
 }
 
 .information {
   color: white;
   font-size: 15px;
   margin-top: 5%;
-  background-color: blue;
+  background-color: rgb(98, 0, 255);
 }
 
 /* WEATHER */
@@ -57,7 +62,7 @@ body {
   margin: 20px auto auto;
   padding: 5px;
   width: 100%;
-  background-color:blue;
+  background-color:rgb(98, 0, 255);
 }
 
 /* MUSIC */
@@ -71,7 +76,7 @@ body {
   font-size: 15px;
   margin: 20px auto auto;
   width: 100%;
-  background-color: blue;
+  background-color: rgb(98, 0, 255);
 }
 
 .musicClass {
@@ -97,7 +102,7 @@ h5 {
   margin: 20px auto auto;
   padding: 5px;
   width: 100%;
-  background-color: blue;
+  background-color: rgb(98, 0, 255);
 }
 
 .container {
@@ -122,6 +127,24 @@ h5 {
 }
 
 .culture {
+  justify-content: center;
+  align-items: baseline;
+  margin: auto auto auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.vibe {
+  justify-content: center;
+  align-items: baseline;
+  margin: auto auto auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.transportation {
   justify-content: center;
   align-items: baseline;
   margin: auto auto auto;

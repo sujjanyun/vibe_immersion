@@ -13,13 +13,14 @@
             <h1>Welcome to New Orleans!</h1>
         </header>
         <section class="information">
+            <h1>The Crescent City</h1>
             <p>New Orleans is known for its European-style architecture, mouth-watering Creole cuisine and all-around good-time vibes. And as its backbone is music: Jazz, blues, rock 'n' roll and Zydeco tunes ooze from every city crevice. But for many, the main reason to visit is Mardi Gras, an over-the-top party with Carnival traits, such as masks, music, floats and merriment. Even if you don't make it to Mardi Gras, you'll still find a party year-round, with revelers pouring out of Bourbon Street clubs until the wee hours of the morning and a festival of some sort almost every weekend.</p>
         </section>
         <section class="weather">
             <h1>Current Weather</h1>
             <h2 id="weather">Loading</h2>
             <script>
-                fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
+                fetch("https://api.openweathermap.org/data/2.5/weather?q=rome&appid=2e988d0dd71c48d57f928c742b85072b&units=imperial")
                 .then(response => response.json())
                 .then(body => {
                 document.getElementById("weather").innerHTML = body.main.temp + "°";
@@ -33,20 +34,63 @@
         </section>
 <!-- FUN FACTS -->
         <section class="funfacts">
-            <div id=shake><h2>Fun Facts!</h2></div>
+            <h2>Fun Facts!</h2>
             <div class="landingPage">
                 <div class="container"> 
                     <div class="food">
                     <h5>CUISINE</h5>
-                        <img src="https://chowhound3.cbsistatic.com/resize/d9dfc6b1b3a05f3da23a07355b22fb3bce2d8107/2015/05/10900_crawfish_boil2.jpg?fit=bounds&height=800&width=1280"  alt="food">Crawfish</p>
+                        <img src="https://chowhound3.cbsistatic.com/resize/d9dfc6b1b3a05f3da23a07355b22fb3bce2d8107/2015/05/10900_crawfish_boil2.jpg?fit=bounds&height=800&width=1280" alt="food">
+                        <p>
+                            <ol>
+                                <li>The submarine sandwich which is also called 'sub' or the 'grinder' is known as "po'boy." in New Orleans.</li>
+                                <li>Cajun is Country Food; Creole is City Food. Traditionally, Cajun food was served by the Acadians (French colonists) who came to settle in the southern part of Louisiana. Known for being rural, many of the people in that area had to become inventive with the food they made. Simple ingredients. Low waste. These were key tenants of Cajun cooking, and rules that still apply today. One famous Cajun dish – “Boudin” – was created with the “use all the animal” mentaility. Boudin is a Cajun sausage that uses pork, rice, seasoning, and typically pig liver. Creole food, on the other hand, is known as the food of the French and Spanish upper class who originally settled in Louisiana – particularly the New Orleans area.
+                                </li>
+                                <li>Onion, Celery, & Bell Pepper are the “Holy Trinity of Cajun Cuisine.” The base of most dishes will have these three ingredients, with bell pepper replacing carrot as a key, base ingredient.</li>
+                            </ol>
+                        </p>
                     </div>
-                   
+                    <div class="culture">    
+                    <h5>CULTURE</h5>
+                        <img src="https://s3.amazonaws.com/assets.forward.com/images/cropped/gettyimages-73376701-1486575340.jpg" alt="culture">
+                        <p>
+                            <ol>
+                                <li>Named after the French ruler Orléans, the city features a lot of French influence in its cuisines and Creole culture.</li>
+                                <li>The Voodoo culture was introduced in New Orleans by the 1800's voodoo queens. Of the queens, Marie Laveau became more prominent as she overthrew other queens to become the sole oracle.
+                                </li>
+                                <li>Don’t let the name French Quarter fool you, most of the architecture was inspired by the Spaniards.</li>
+                            </ol>
+                        </p>
+                    </div>
+                    <div class="vibe">
+                    <h5>HISTORY</h5>   
+                        <img src="https://mechrissyg.files.wordpress.com/2017/08/new-orleans.jpg" alt="vibe">
+                        <p>
+                            <ol>
+                                <li>The First Mardi Gras Parade took place in New Orleans on Shrove Tuesday in 1938.</li>
+                                <li>The phrase 'Dixieland' comes from the name 'Dix' that was the currency of Louisiana back when the states were using their own currency.
+                                </li>
+                                <li>Bourbon Street, despite popular thought, was named after a dynasty in France, not the actual whiskey.</li>
+                            </ol>
+                        </p>
+                    </div>
+                    <div class="transportation">
+                    <h5>TRANSPORT</h5>
+                        <img src="https://travel.home.sndimg.com/content/dam/images/travel/fullset/2013/01/25/15/new-orleans-getting-around.rend.hgtvcom.1280.960.suffix/1491592445841.jpeg" alt="taxi">
+                        <p>
+                            <ol>
+                                <li>There are no counties inside of Louisiana, instead the state is separated into subdivisions also known as parishes. This is the only state in the United States that goes by this rule.</li>
+                                <li>Due to New Orleans being built mainly on swamp land most of the gravesites are built in above ground tombs.
+                                </li>
+                                <li>While many may associate the word “muggle” as a non-magical person, it was actually originally a term used for marijuana back in the 1920s in New Orleans.</li>
+                            </ol>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="get.js"></script>
-<script src="js/no.js"></script>
+<script src="no.js"></script>
 </body>
 </html>

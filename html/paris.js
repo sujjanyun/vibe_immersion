@@ -2,7 +2,7 @@
 // <!-- music info load function -->
 window.addEventListener("load", function (event) {
   event.preventDefault();
-  const url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=japan&api_key=a4639d1359fd1cae45a045b4b7114178&limit=3&format=json";
+  const url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=france&api_key=a4639d1359fd1cae45a045b4b7114178&limit=3&format=json";
   fetch(url)
     .then(function (response) {
       return response.json();
